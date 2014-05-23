@@ -4,12 +4,18 @@ import java.io.BufferedReader;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
-public class ClientSocketBowling {
+import lesClasses.Reservation;
+import lesInterfaces.IClientSocketBowling;
+import lesInterfaces.IJoueur;
+
+public class ClientSocketBowling implements IClientSocketBowling {
 
 	Socket maSocketClient;
 	
-	public static void main(String[] args) {
+	@Override
+	public void main(String[] args) {
 		Socket uneSocket;
 		BufferedReader unBufferReader;
 		
@@ -24,6 +30,24 @@ public class ClientSocketBowling {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public String ObtenirTicketReservation(ArrayList<IJoueur> lesJoueurs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Reservation ConfirmerTicketReservation(Reservation maReservation) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Reservation ObtenirScores(String codeReservation) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
