@@ -5,7 +5,7 @@ import java.io.ObjectInputStream.GetField;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServeurBowling {
+public class ServeurSocketBowling {
 
 	public static void main(String[] args) {
 		ServerSocket uneSocketServeur;

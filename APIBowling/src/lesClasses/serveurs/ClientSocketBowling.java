@@ -5,7 +5,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class ClientBowling {
+public class ClientSocketBowling {
 
 	Socket maSocketClient;
 	
