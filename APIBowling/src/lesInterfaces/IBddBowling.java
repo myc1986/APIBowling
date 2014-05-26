@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 import lesClasses.Reservation;
 
-public interface IBddOracle {
-	
+public interface IBddBowling {
 	ArrayList<Reservation> GetListReservations();
 	Reservation GetReservation(String codeReservation);
 	IPiste GetPisteAvecMaxTempsDisponibilite();
