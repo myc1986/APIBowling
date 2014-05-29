@@ -1,44 +1,61 @@
 package lesClasses;
 
-import java.util.ArrayList;
-
-import lesInterfaces.IJoueur;
+import java.util.Random;
 import lesInterfaces.IPiste;
 
 public class Piste implements IPiste {
 
-	public Piste()
+	private int _nbrQuilles;
+	private int _tempsDisponibilité;
+	private int _nbrQuillesMax;
+	
+	public Piste(int tempsDisponibilite)
 	{
-		
+		_nbrQuillesMax = 10;
+		_nbrQuilles = 10;
+		_tempsDisponibilité = tempsDisponibilite;
+	}
+	
+	public Piste(int nbrQuilles, int tempsDisponibilite)
+	{
+		_nbrQuillesMax = nbrQuilles;
+		_nbrQuilles = nbrQuilles;
+		_tempsDisponibilité = tempsDisponibilite;
 	}
 
 	@Override
-	public int RenverserQuilles(int nbrQuilles) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int RenverserQuilles() {
+		Random leRandom = new Random();
+		
+		int nbrTire = leRandom.nextInt(_nbrQuillesMax+1);
+		int nbrQuillesRenverser = 0;
+		
+		if((nbrTire <= _nbrQuilles) && (nbrTire > 0))
+		{
+			_nbrQuilles = _nbrQuilles - nbrTire;
+			nbrQuillesRenverser = nbrTire;
+		}
+		
+		return nbrQuillesRenverser;
 	}
 
 	@Override
 	public int ObtenirTempsDisponibiliteRestant() {
-		// TODO Auto-generated method stub
-		return 0;
+		return _tempsDisponibilité;
 	}
 
 	@Override
 	public void Reinitialiser() {
-		// TODO Auto-generated method stub
-		
+		_nbrQuilles = _nbrQuillesMax;
 	}
 
 	@Override
 	public int CompterQuillesEnPlace() {
-		// TODO Auto-generated method stub
-		return 0;
+		return _nbrQuilles;
 	}
 
 	@Override
 	public int CompterQuillesRenverse() {
-		// TODO Auto-generated method stub
-		return 0;
+		return _nbrQuillesMax - _nbrQuilles;
 	}
 }
