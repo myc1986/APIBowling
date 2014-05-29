@@ -8,12 +8,14 @@ public class Piste implements IPiste {
 	private int _nbrQuilles;
 	private int _tempsDisponibilité;
 	private int _nbrQuillesMax;
+	private int _nbrQuilleRenverseAuLance;
 	
 	public Piste(int tempsDisponibilite)
 	{
 		_nbrQuillesMax = 10;
 		_nbrQuilles = 10;
 		_tempsDisponibilité = tempsDisponibilite;
+		_nbrQuilleRenverseAuLance = 0;
 	}
 	
 	public Piste(int nbrQuilles, int tempsDisponibilite)
@@ -36,6 +38,8 @@ public class Piste implements IPiste {
 			nbrQuillesRenverser = nbrTire;
 		}
 		
+		_nbrQuilleRenverseAuLance = nbrQuillesRenverser;
+		
 		return nbrQuillesRenverser;
 	}
 
@@ -57,5 +61,10 @@ public class Piste implements IPiste {
 	@Override
 	public int CompterQuillesRenverse() {
 		return _nbrQuillesMax - _nbrQuilles;
+	}
+
+	@Override
+	public int CompterQuillesRenverseAuLance() {
+		return _nbrQuilleRenverseAuLance;
 	}
 }
