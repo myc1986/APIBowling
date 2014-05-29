@@ -51,6 +51,7 @@ public class Piste implements IPiste {
 	@Override
 	public void Reinitialiser() {
 		_nbrQuilles = _nbrQuillesMax;
+		_nbrQuilleRenverseAuLance = 0;
 	}
 
 	@Override
@@ -59,7 +60,7 @@ public class Piste implements IPiste {
 	}
 
 	@Override
-	public int CompterQuillesRenverse() {
+	public int CompterTotalQuillesRenverse() {
 		return _nbrQuillesMax - _nbrQuilles;
 	}
 
