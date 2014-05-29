@@ -5,6 +5,6 @@ public interface IPiste {
 	int ObtenirTempsDisponibiliteRestant();
 	void Reinitialiser();
 	int CompterQuillesEnPlace();
-	int CompterQuillesRenverse();
+	int CompterTotalQuillesRenverse();
 	int CompterQuillesRenverseAuLance();
 }
