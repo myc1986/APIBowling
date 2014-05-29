@@ -3,7 +3,7 @@ package lesInterfaces;
 import lesClasses.Piste;
 
 public interface IFrame {
-	void MisAJourFrame(Piste unePiste);
+	void MisAJourFrame(IPiste unePiste);
 	boolean PeutEncoreLance();
 	int GetNumeroFrame();
 	int ObtenirScore();
