@@ -3,5 +3,5 @@ package lesInterfaces;
 public interface IJoueur {
 	int ScoreTotalScore();
 	String GetPrenom();
-	int SetPrenom(String prenom);
+	void SetPrenom(String prenom);
 }
