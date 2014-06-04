@@ -69,8 +69,15 @@ public class Joueur implements IJoueur {
 			laPiste.RenverserQuilles();
 		}
 		
+		Iterable<IFrame> mes = _mesFrames;
+		
 		laFrameDeTravail.MiseAJour(laPiste);
 		
 		
+	}
+
+	@Override
+	public ArrayList<IFrame> GetMesFrames() {
+		return _mesFrames;
 	}
 }
