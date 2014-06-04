@@ -66,14 +66,11 @@ public class Joueur implements IJoueur {
 		
 		if (laFrameDeTravail != null) {
 			
-			laPiste.RenverserQuilles();
+			while (laFrameDeTravail.PeutEncoreLance()) {
+				laPiste.RenverserQuilles();
+				laFrameDeTravail.MiseAJour(laPiste);
+			}
 		}
-		
-		Iterable<IFrame> mes = _mesFrames;
-		
-		laFrameDeTravail.MiseAJour(laPiste);
-		
-		
 	}
 
 	@Override
