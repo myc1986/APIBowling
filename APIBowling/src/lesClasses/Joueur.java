@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import lesInterfaces.IFrame;
 import lesInterfaces.IJoueur;
+import lesInterfaces.IPiste;
 
 public class Joueur implements IJoueur {
 	private String _prenom;
@@ -46,5 +47,30 @@ public class Joueur implements IJoueur {
 		} while (iCountFrame >= _mesFrames.size() || aTrouve);
 		
 		return laFrameAJoue;
+	}
+
+	@Override
+	public void Lancer(IPiste laPiste) {
+		int iCountFrame = 0;
+		boolean frameTrouve = false;
+		IFrame laFrameDeTravail = null;
+		
+		while (!frameTrouve && iCountFrame < _mesFrames.size()) {
+			
+			if(_mesFrames.get(iCountFrame).PeutEncoreLance())
+			{
+				laFrameDeTravail = _mesFrames.get(iCountFrame);
+				frameTrouve = true;
+			}
+		}
+		
+		if (laFrameDeTravail != null) {
+			
+			laPiste.RenverserQuilles();
+		}
+		
+		laFrameDeTravail.MiseAJour(laPiste);
+		
+		
 	}
 }
