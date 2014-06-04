@@ -1,7 +1,10 @@
 package lesInterfaces;
 
-public interface IJoueur {
+import java.util.ArrayList;
+
+public interface IJoueur extends ILanceur {
 	int ScoreTotalScore();
 	String GetPrenom();
 	void SetPrenom(String prenom);
+	ArrayList<IFrame> GetMesFrames();
 }
