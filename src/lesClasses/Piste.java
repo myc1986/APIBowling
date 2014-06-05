@@ -6,7 +6,7 @@ import lesInterfaces.IPiste;
 public class Piste implements IPiste {
 
 	private int _nbrQuilles;
-	private int _tempsDisponibilité;
+	private int _tempsDisponibilite;
 	private int _nbrQuillesMax;
 	private int _nbrQuilleRenverseAuLance;
 	
@@ -14,7 +14,7 @@ public class Piste implements IPiste {
 	{
 		_nbrQuillesMax = 10;
 		_nbrQuilles = 10;
-		_tempsDisponibilité = tempsDisponibilite;
+		_tempsDisponibilite = tempsDisponibilite;
 		_nbrQuilleRenverseAuLance = 0;
 	}
 	
@@ -22,7 +22,7 @@ public class Piste implements IPiste {
 	{
 		_nbrQuillesMax = nbrQuilles;
 		_nbrQuilles = nbrQuilles;
-		_tempsDisponibilité = tempsDisponibilite;
+		_tempsDisponibilite = tempsDisponibilite;
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class Piste implements IPiste {
 
 	@Override
 	public int ObtenirTempsDisponibiliteRestant() {
-		return _tempsDisponibilité;
+		return _tempsDisponibilite;
 	}
 
 	@Override
