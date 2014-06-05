@@ -3,8 +3,8 @@ package lesClasses;
 import lesInterfaces.IArgument;
 
 public class Argument implements IArgument {
-	String _nom;
-	String _value;
+	private String _nom;
+	private String _value;
 	
 	@Override
 	public String GetNom() {
