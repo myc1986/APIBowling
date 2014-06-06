@@ -1,5 +1,7 @@
 package lesInterfaces;
 
+import java.security.Timestamp;
+
 public interface IPartie {
 	void DemarrerPartie();
 	void TerminerPartie();
@@ -7,6 +9,6 @@ public interface IPartie {
 	int CalculerScoreJoueur(String prenom);
 	int CalculerScoresJoueurs();
 	boolean PartieDemarree();
-	int TempsPartie();
+	Timestamp TempsPartie();
 	void AfficherScoreJoeur(String prenom);
 }

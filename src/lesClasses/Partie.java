@@ -1,12 +1,18 @@
 package lesClasses;
 
+import java.security.Timestamp;
+import java.sql.Date;
 import java.util.ArrayList;
 
 import lesInterfaces.IPartie;
 import lesInterfaces.IJoueur;
 
 public class Partie implements IPartie{
-	private ArrayList<IJoueur> _mesJoueurs;
+	protected ArrayList<IJoueur> _mesJoueurs;
+	protected boolean _partieDemarre;
+	protected Timestamp _tempsReelPartie;
+	protected Timestamp _tempsPrevu;
+	protected Integer _nbrDeFrame;
 	
 	@Override
 	public void DemarrerPartie() {
@@ -54,14 +60,13 @@ public class Partie implements IPartie{
 
 	@Override
 	public boolean PartieDemarree() {
-		// TODO Auto-generated method stub
-		return false;
+		return _partieDemarre;
 	}
 
 	@Override
-	public int TempsPartie() {
+	public Timestamp TempsPartie() {
 		// TODO Auto-generated method stub
-		return 0;
+		return _tempsReelPartie;
 	}
 	
 	public int CalculerScoresJoueurs(){
