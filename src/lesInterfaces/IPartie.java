@@ -2,10 +2,11 @@ package lesInterfaces;
 
 public interface IPartie {
 	void DemarrerPartie();
-	void AfficherScoreJoeur();
 	void TerminerPartie();
 	void AfficherScoresJoueurs();
-	int CalculerScoreJoueur();	
+	int CalculerScoreJoueur(String prenom);
+	int CalculerScoresJoueurs();
 	boolean PartieDemarree();
 	int TempsPartie();
+	void AfficherScoreJoeur(String prenom);
 }

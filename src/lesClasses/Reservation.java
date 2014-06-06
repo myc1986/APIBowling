@@ -10,7 +10,7 @@ public class Reservation implements IModuleConsulterScore, IModuleReserverPartie
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 	@Override
 	public void ConsulterScore() {
 		// TODO Auto-generated method stub
