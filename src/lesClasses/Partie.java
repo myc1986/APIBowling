@@ -1,7 +1,5 @@
 package lesClasses;
 
-import java.security.Timestamp;
-import java.sql.Date;
 import java.util.ArrayList;
 
 import lesInterfaces.IPartie;
@@ -10,14 +8,26 @@ import lesInterfaces.IJoueur;
 public class Partie implements IPartie{
 	protected ArrayList<IJoueur> _mesJoueurs;
 	protected boolean _partieDemarre;
-	protected Timestamp _tempsReelPartie;
-	protected Timestamp _tempsPrevu;
+	protected int _tempsReelPartie;
+	protected Integer _tempsPrevu;
 	protected Integer _nbrDeFrame;
+	protected boolean _partieTermine;
+	
+	public Partie(ArrayList<IJoueur> lesJoueurs)
+	{
+		_tempsReelPartie = 0;
+		_tempsPrevu = 0;
+		_nbrDeFrame = 10;
+		_mesJoueurs = lesJoueurs;
+		_partieTermine = false;
+		_partieDemarre = false;
+	}
 	
 	@Override
 	public void DemarrerPartie() {
 		// TODO Auto-generated method stub
-		
+		_partieTermine = false;
+		_partieDemarre = true;
 	}
 
 	@Override
@@ -33,8 +43,9 @@ public class Partie implements IPartie{
 
 	@Override
 	public void TerminerPartie() {
-		// TODO Auto-generated method stub
 		
+		
+		_partieTermine = true;
 	}
 
 	@Override
@@ -64,8 +75,7 @@ public class Partie implements IPartie{
 	}
 
 	@Override
-	public Timestamp TempsPartie() {
-		// TODO Auto-generated method stub
+	public int TempsPartie() {
 		return _tempsReelPartie;
 	}
 	
